@@ -1,0 +1,732 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue254;\red144\green1\blue18;
+\red0\green0\blue255;\red14\green110\blue109;\red19\green118\blue70;\red191\green28\blue37;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99608;\cssrgb\c63922\c8235\c8235;
+\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c52549\c34510;\cssrgb\c80392\c19216\c19216;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <>\cb1 \
+\cb3   <meta httpEquiv=\cf4 \strokec4 "Content-Type"\cf2 \strokec2  content=\cf4 \strokec4 "text/html; charset=utf-8"\cf2 \strokec2  />\cb1 \
+\cb3   <meta httpEquiv=\cf4 \strokec4 "Content-Style-Type"\cf2 \strokec2  content=\cf4 \strokec4 "text/css"\cf2 \strokec2  />\cb1 \
+\cb3   <title />\cb1 \
+\cb3   <meta name=\cf4 \strokec4 "Generator"\cf2 \strokec2  content=\cf4 \strokec4 "Cocoa HTML Writer"\cf2 \strokec2  />\cb1 \
+\cb3   <meta name=\cf4 \strokec4 "CocoaVersion"\cf2 \strokec2  content=\cf4 \strokec4 "1894.7"\cf2 \strokec2  />\cb1 \
+\cb3   <style\cb1 \
+\cb3     type=\cf4 \strokec4 "text/css"\cf2 \cb1 \strokec2 \
+\cb3     dangerouslySetInnerHTML=\{\{\cb1 \
+\cb3       __html:\cb1 \
+\cb3         \cf4 \strokec4 "\\n    p.p1 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px Helvetica; color: #000000; -webkit-text-stroke: #000000\}\\n    span.s1 \{font-kerning: none\}\\n    span.s2 \{font: 36.0px 'Apple Color Emoji'; font-kerning: none\}\\n  "\cf2 \cb1 \strokec2 \
+\cb3     \}\}\cb1 \
+\cb3   />\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       \cf5 \strokec5 import\cf2 \strokec2  \{\cf4 \strokec4 "\{"\cf2 \strokec2 \} useState \{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf5 \strokec5 from\cf2 \strokec2  \cf4 \strokec4 "react"\cf2 \strokec2 ;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       \cf5 \strokec5 import\cf2 \strokec2  \{\cf4 \strokec4 "\{"\cf2 \strokec2 \} \cf6 \strokec6 Button\cf2 \strokec2  \{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf5 \strokec5 from\cf2 \strokec2  \cf4 \strokec4 "@/components/ui/button"\cf2 \strokec2 ;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 const\cf2 \strokec2  \cf6 \strokec6 EMPTY\cf2 \strokec2  = \cf4 \strokec4 " "\cf2 \strokec2 ;</span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 const\cf2 \strokec2  \cf6 \strokec6 TIE\cf2 \strokec2  = \cf4 \strokec4 "TIE"\cf2 \strokec2 ;</span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 const\cf2 \strokec2  \cf6 \strokec6 NUM_SQUARES\cf2 \strokec2  = \cf7 \strokec7 9\cf2 \strokec2 ;</span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 const\cf2 \strokec2  \cf6 \strokec6 DEFAULT_PLAYER_SYMBOL\cf2 \strokec2  = \cf4 \strokec4 "</span>\cf2 \cb1 \strokec2 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55357 \u56842 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf4 \strokec4 ";</span>\cf2 \cb1 \strokec2 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 const\cf2 \strokec2  \cf6 \strokec6 DEFAULT_COMPUTER_SYMBOL\cf2 \strokec2  = \cf4 \strokec4 "</span>\cf2 \cb1 \strokec2 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55357 \u56507 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf4 \strokec4 ";</span>\cf2 \cb1 \strokec2 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cf5 \strokec5 export\cf2 \strokec2  \cf5 \strokec5 default\cf2 \strokec2  \cf5 \strokec5 function\cf2 \strokec2  \cf6 \strokec6 TicTacToe\cf2 \strokec2 () \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}</span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [board,\cb1 \
+\cb3       setBoard] = useState(\cf6 \strokec6 Array\cf2 \strokec2 (\cf6 \strokec6 NUM_SQUARES\cf2 \strokec2 ).fill(\cf6 \strokec6 EMPTY\cf2 \strokec2 ));\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [playerSymbol,\cb1 \
+\cb3       setPlayerSymbol] = useState(\cf6 \strokec6 DEFAULT_PLAYER_SYMBOL\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       [computerSymbol, setComputerSymbol] = useState(\cf6 \strokec6 DEFAULT_COMPUTER_SYMBOL\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [turn,\cb1 \
+\cb3       setTurn] = useState(\cf5 \strokec5 null\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [gameOver,\cb1 \
+\cb3       setGameOver] = useState(\cf5 \strokec5 false\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [message,\cb1 \
+\cb3       setMessage] = useState(\cf4 \strokec4 "Click a square to start the game!"\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  [score,\cb1 \
+\cb3       setScore] = useState(\{\cf4 \strokec4 "\{"\cf2 \strokec2 \} player: \cf7 \strokec7 0\cf2 \strokec2 , computer: \cf7 \strokec7 0\cf2 \strokec2 , ties: \cf7 \strokec7 0\cf2 \strokec2  \{\cf4 \strokec4 "\}"\cf2 \strokec2 \});\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  legalMoves =\cb1 \
+\cb3       (brd) =&gt; brd.map((v, i) =&gt; v === \cf6 \strokec6 EMPTY\cf2 \strokec2  ? i : \cf5 \strokec5 null\cf2 \strokec2 ).filter(v =&gt; v\cb1 \
+\cb3       !== \cf5 \strokec5 null\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  checkWinner =\cb1 \
+\cb3       (brd) =&gt; \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       \cf6 \strokec6 WAYS_TO_WIN\cf2 \strokec2  = [\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>[\cf7 \strokec7 0\cf2 \strokec2 , \cf7 \strokec7 1\cf2 \strokec2 ,\cb1 \
+\cb3       \cf7 \strokec7 2\cf2 \strokec2 ], [\cf7 \strokec7 3\cf2 \strokec2 , \cf7 \strokec7 4\cf2 \strokec2 , \cf7 \strokec7 5\cf2 \strokec2 ], [\cf7 \strokec7 6\cf2 \strokec2 , \cf7 \strokec7 7\cf2 \strokec2 , \cf7 \strokec7 8\cf2 \strokec2 ],\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>[\cf7 \strokec7 0\cf2 \strokec2 , \cf7 \strokec7 3\cf2 \strokec2 ,\cb1 \
+\cb3       \cf7 \strokec7 6\cf2 \strokec2 ], [\cf7 \strokec7 1\cf2 \strokec2 , \cf7 \strokec7 4\cf2 \strokec2 , \cf7 \strokec7 7\cf2 \strokec2 ], [\cf7 \strokec7 2\cf2 \strokec2 , \cf7 \strokec7 5\cf2 \strokec2 , \cf7 \strokec7 8\cf2 \strokec2 ],\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>[\cf7 \strokec7 0\cf2 \strokec2 , \cf7 \strokec7 4\cf2 \strokec2 ,\cb1 \
+\cb3       \cf7 \strokec7 8\cf2 \strokec2 ], [\cf7 \strokec7 2\cf2 \strokec2 , \cf7 \strokec7 4\cf2 \strokec2 , \cf7 \strokec7 6\cf2 \strokec2 ],\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 for\cf2 \strokec2  (\cf5 \strokec5 let\cf2 \strokec2  line\cb1 \
+\cb3       \cf5 \strokec5 of\cf2 \strokec2  \cf6 \strokec6 WAYS_TO_WIN\cf2 \strokec2 ) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       [a, b, c] = line;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \cb1 \strokec2 \
+\cb3       (brd[a] !== \cf6 \strokec6 EMPTY\cf2 \strokec2  &amp;&amp; brd[a] === brd[b] &amp;&amp; brd[b] ===\cb1 \
+\cb3       brd[c]) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       \cf5 \strokec5 return\cf2 \strokec2  brd[a];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \cb1 \strokec2 \
+\cb3       (brd.every(square =&gt; square !== \cf6 \strokec6 EMPTY\cf2 \strokec2 )) \cf5 \strokec5 return\cf2 \strokec2  \cf6 \strokec6 TIE\cf2 \strokec2 ;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 return\cf2 \strokec2  \cf5 \strokec5 null\cf2 \strokec2 ;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \};\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       makeComputerMove = (brd) =&gt; \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 let\cf2 \strokec2  move;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>// \cf6 \strokec6 Try\cf2 \strokec2  to win\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 for\cf2 \strokec2  (\cf5 \strokec5 let\cf2 \strokec2  i \cf5 \strokec5 of\cf2 \cb1 \strokec2 \
+\cb3       legalMoves(brd)) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 let\cf2 \cb1 \strokec2 \
+\cb3       copy = [...brd];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       copy[i] = computerSymbol;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \cb1 \strokec2 \
+\cb3       (checkWinner(copy) === computerSymbol) \cf5 \strokec5 return\cf2 \strokec2  i;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>// \cf6 \strokec6 Try\cf2 \strokec2  to\cb1 \
+\cb3       block player\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 for\cf2 \strokec2  (\cf5 \strokec5 let\cf2 \strokec2  i \cf5 \strokec5 of\cf2 \cb1 \strokec2 \
+\cb3       legalMoves(brd)) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 let\cf2 \cb1 \strokec2 \
+\cb3       copy = [...brd];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       copy[i] = playerSymbol;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \cb1 \strokec2 \
+\cb3       (checkWinner(copy) === playerSymbol) \cf5 \strokec5 return\cf2 \strokec2  i;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>// \cf6 \strokec6 Pick\cf2 \cb1 \strokec2 \
+\cb3       center, then corners, then sides\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       \cf6 \strokec6 BEST_MOVES\cf2 \strokec2  = [\cf7 \strokec7 4\cf2 \strokec2 , \cf7 \strokec7 0\cf2 \strokec2 , \cf7 \strokec7 2\cf2 \strokec2 , \cf7 \strokec7 6\cf2 \strokec2 , \cf7 \strokec7 8\cf2 \strokec2 , \cf7 \strokec7 1\cf2 \strokec2 , \cf7 \strokec7 3\cf2 \strokec2 , \cf7 \strokec7 5\cf2 \strokec2 , \cf7 \strokec7 7\cf2 \strokec2 ];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 for\cf2 \strokec2  (\cf5 \strokec5 let\cf2 \strokec2  i \cf5 \strokec5 of\cf2 \cb1 \strokec2 \
+\cb3       \cf6 \strokec6 BEST_MOVES\cf2 \strokec2 ) \cf5 \strokec5 if\cf2 \strokec2  (brd[i] === \cf6 \strokec6 EMPTY\cf2 \strokec2 ) \cf5 \strokec5 return\cf2 \strokec2  i;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \};\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       handleSquareClick = (i) =&gt; \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \strokec2  (board[i]\cb1 \
+\cb3       !== \cf6 \strokec6 EMPTY\cf2 \strokec2  || gameOver) \cf5 \strokec5 return\cf2 \strokec2 ;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       newBoard = [...board];\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>newBoard[i] =\cb1 \
+\cb3       playerSymbol;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  result\cb1 \
+\cb3       = checkWinner(newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \strokec2  (result)\cb1 \
+\cb3       \cf5 \strokec5 return\cf2 \strokec2  endGame(result, newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       computerMove = makeComputerMove(newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       newBoard[computerMove] = computerSymbol;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 const\cf2 \cb1 \strokec2 \
+\cb3       finalResult = checkWinner(newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \cb1 \strokec2 \
+\cb3       (finalResult) \cf5 \strokec5 return\cf2 \strokec2  endGame(finalResult, newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setBoard(newBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setMessage(\cf4 \strokec4 "Your move!"\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \};\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  endGame =\cb1 \
+\cb3       (winner, finalBoard) =&gt; \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setBoard(finalBoard);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setGameOver(\cf5 \strokec5 true\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cf5 \strokec5 if\cf2 \strokec2  (winner\cb1 \
+\cb3       === playerSymbol) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setMessage(\cf4 \strokec4 "\cf2 \cb1 \strokec2 \
+\cb3     </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55356 \u57225 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 > \cf6 \strokec6 You\cf2 \strokec2  win!\cf4 \strokec4 ");</span>\cf2 \cb1 \strokec2 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setScore(\{\cf4 \strokec4 "\{"\cf2 \strokec2 \} ...score, player: score.player + \cf7 \strokec7 1\cf2 \strokec2  \{\cf4 \strokec4 "\}"\cf2 \strokec2 \});\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf5 \strokec5 else\cf2 \strokec2  \cf5 \strokec5 if\cf2 \strokec2  (winner === computerSymbol) \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setMessage(\cf4 \strokec4 "\cf2 \cb1 \strokec2 \
+\cb3     </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55357 \u56507 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 > \cf6 \strokec6 Computer\cf2 \strokec2  wins!\cf4 \strokec4 ");</span>\cf2 \cb1 \strokec2 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setScore(\{\cf4 \strokec4 "\{"\cf2 \strokec2 \} ...score, computer: score.computer + \cf7 \strokec7 1\cf2 \strokec2  \{\cf4 \strokec4 "\}"\cf2 \strokec2 \});\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf5 \strokec5 else\cf2 \strokec2  \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setMessage(\cf4 \strokec4 "\cf2 \cb1 \strokec2 \
+\cb3     </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55357 \u56848 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 > \cf6 \strokec6 It\cf4 \strokec4 's a tie!");</span>\cf2 \cb1 \strokec2 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       setScore(\{\cf4 \strokec4 "\{"\cf2 \strokec2 \} ...score, ties: score.ties + \cf7 \strokec7 1\cf2 \strokec2  \{\cf4 \strokec4 "\}"\cf2 \strokec2 \});\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \};\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 const\cf2 \strokec2  resetGame = ()\cb1 \
+\cb3       =&gt; \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setBoard(\cf6 \strokec6 Array\cf2 \strokec2 (\cf6 \strokec6 NUM_SQUARES\cf2 \strokec2 ).fill(\cf6 \strokec6 EMPTY\cf2 \strokec2 ));\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setGameOver(\cf5 \strokec5 false\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>\cb1 \
+\cb3       setMessage(\cf4 \strokec4 "New game started. Your move!"\cf2 \strokec2 );\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\}"\cf2 \strokec2 \};\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <br />\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>\cf5 \strokec5 return\cf2 \strokec2  (\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>&lt;div\cb1 \
+\cb3       className=\cf4 \strokec4 "max-w-md mx-auto text-center p-4"\cf2 \strokec2 &gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>&lt;h1\cb1 \
+\cb3       className=\cf4 \strokec4 "text-2xl font-bold mb-2"\cf2 \strokec2 &gt;\cf6 \strokec6 Emoji\cf2 \strokec2  \cf6 \strokec6 Tic\cf2 \strokec2 -\cf6 \strokec6 Tac\cf2 \strokec2 -\cf6 \strokec6 Toe\cf2 \strokec2 &lt;/h1&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       &lt;div className=\cf4 \strokec4 "grid grid-cols-3 gap-2 mb-4"\cf2 \strokec2 &gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}board.map((val, i) =&gt; (\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       &lt;button\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       key=\{\cf4 \strokec4 "\{"\cf2 \strokec2 \}i\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       className=\cf4 \strokec4 "text-4xl border p-4 rounded shadow h-20 w-20"\cf2 \cb1 \strokec2 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       onClick=\{\cf4 \strokec4 "\{"\cf2 \strokec2 \}() =&gt; handleSquareClick(i)\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       &gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}val\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       &lt;/button&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       ))\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       &lt;/div&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>&lt;p\cb1 \
+\cb3       className=\cf4 \strokec4 "text-lg mb-2"\cf2 \strokec2 &gt;\{\cf4 \strokec4 "\{"\cf2 \strokec2 \}message\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}&lt;/p&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       &lt;div className=\cf4 \strokec4 "mb-4"\cf2 \strokec2 &gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >\cb1 \
+\cb3         &nbsp; &nbsp; &nbsp; &nbsp;\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       </span>\cb1 \
+\cb3       &lt;p&gt;\{\cf4 \strokec4 "\{"\cf2 \strokec2 \}playerSymbol\{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf6 \strokec6 You\cf2 \strokec2 : \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}score.player\{\cf4 \strokec4 "\}"\cf2 \strokec2 \} | \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}\cb1 \
+\cb3       computerSymbol\{\cf4 \strokec4 "\}"\cf2 \strokec2 \} \cf6 \strokec6 Computer\cf2 \strokec2 : \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}score.computer\{\cf4 \strokec4 "\}"\cf2 \strokec2 \} |\{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3     </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s2"\cf2 \strokec2 >
+\f1 \cf8 \strokec8 \uc0\u55358 \u56605 
+\f0 \cf2 \strokec2 </span>\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       \{\cf4 \strokec4 " "\cf2 \strokec2 \}\cb1 \
+\cb3       \cf6 \strokec6 Ties\cf2 \strokec2 : \{\cf4 \strokec4 "\{"\cf2 \strokec2 \}score.ties\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}&lt;/p&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       &lt;/div&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; &nbsp; </span>\cb1 \
+\cb3       &lt;\cf6 \strokec6 Button\cf2 \strokec2  onClick=\{\cf4 \strokec4 "\{"\cf2 \strokec2 \}resetGame\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}&gt;\cf6 \strokec6 Play\cf2 \strokec2  \cf6 \strokec6 Again\cf2 \strokec2 &lt;/\cf6 \strokec6 Button\cf2 \strokec2 &gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; &nbsp; </span>&lt;/div&gt;\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\cb1 \
+\cb3       <span className=\cf4 \strokec4 "Apple-converted-space"\cf2 \strokec2 >&nbsp; </span>);\cb1 \
+\cb3     </span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3   <p className=\cf4 \strokec4 "p1"\cf2 \strokec2 >\cb1 \
+\cb3     <span className=\cf4 \strokec4 "s1"\cf2 \strokec2 >\{\cf4 \strokec4 "\}"\cf2 \strokec2 \}</span>\cb1 \
+\cb3   </p>\cb1 \
+\cb3 </>\cb1 \
+\
+}
